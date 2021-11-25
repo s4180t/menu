@@ -1,0 +1,22 @@
+specVersion: "2.6"
+metadata:
+    name: menu
+type: application
+builder:
+    resources:
+        excludes:
+            - "**/Component-preload.js"
+    settings:
+        includeDependency:
+            - sap.m
+            - sap.ui.core
+            - sap.ui.layout
+            - sap.tnt
+framework:
+  name: SAPUI5
+  version: "1.76.0"
+  libraries:
+    - name: sap.m
+    - name: sap.tnt
+    - name: sap.ui.core
+    - name: sap.ui.layout

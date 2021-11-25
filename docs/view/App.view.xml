@@ -1,0 +1,76 @@
+<mvc:View
+	xmlns:tnt="sap.tnt"
+	xmlns:layout="sap.ui.layout"
+	controllerName="sap.ui.demo.basicTemplate.controller.App"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m">
+	<!-- <App id="App">
+		<pages>
+			<Page showHeader="false">
+				<layout:DynamicSideContent
+					sideContentPosition="Begin"
+					showSideContent="{mView>/showSideContent}">
+					<layout:mainContent>
+						
+					</layout:mainContent>
+					<layout:sideContent>
+						<mvc:XMLView viewName="sap.ui.demo.basicTemplate.view.Master" />
+					</layout:sideContent>
+				</layout:DynamicSideContent>
+			</Page>
+		</pages>
+	</App> -->
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<tnt:content>
+					<Button
+						press="onSideNavButtonPress"
+						icon="sap-icon://menu">
+						<layoutData>
+							<OverflowToolbarLayoutData priority="NeverOverflow" />
+						</layoutData>
+					</Button>
+					<ToolbarSpacer />
+					<Title text="{i18n>appTitle}" />
+					<ToolbarSpacer />
+				</tnt:content>
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation itemSelect="handleSideNavItemSelect">
+				<tnt:NavigationList>
+					<tnt:NavigationListItem
+						text="{i18n>myTasks}"
+						icon="sap-icon://horizontal-bar-chart" />
+					<tnt:NavigationListItem
+						text="{i18n>outgoingTasks}"
+						icon="sap-icon://activity-individual" />
+					<tnt:NavigationListItem
+						text="{i18n>allTasks}"
+						icon="sap-icon://inspection" />
+					<tnt:NavigationListItem
+						text="{i18n>deputy}"
+						icon="sap-icon://customer-history" />
+					<tnt:NavigationListItem
+						text="{i18n>dashboard}"
+						icon="sap-icon://business-objects-experience" />
+					<tnt:NavigationListItem
+						text="{i18n>kpe}"
+						icon="sap-icon://chart-table-view" />
+				</tnt:NavigationList>
+				<tnt:fixedItem>
+					<tnt:NavigationList>
+						<tnt:NavigationListItem
+							text="{i18n>createTask}"
+							icon="sap-icon://add-document" />
+					</tnt:NavigationList>
+				</tnt:fixedItem>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<NavContainer id="navContainer" />
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

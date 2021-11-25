@@ -1,0 +1,16 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="sap.ui.demo.basicTemplate.controller.Detail"
+    height="100%">
+    <Page>
+        <!-- <customHeader>
+            <Toolbar>
+                <Button
+                    icon="{= ${mView>/showSideContent} ? 'sap-icon://navigation-left-arrow' : 'sap-icon://navigation-right-arrow' }"
+                    press="handleMasterToggle" />
+            </Toolbar>
+        </customHeader> -->
+        <Text text="{i18n>Detail2}" />
+    </Page>
+</mvc:View>
